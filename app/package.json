@@ -11,5 +11,5 @@
     "test": "exit 0"
   },
   "author": "Torben Weibert",
-  "license": "GPL-3.0"
+  "license": "AGPL-3.0"
 }

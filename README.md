@@ -58,7 +58,9 @@ Meaning of the individual fields:
 
 ## License
 
-streammonitor is released under the GNU General Public License.
+streammonitor is released under the GNU AGPL v3.0.
+
+Commercial licenses are available on request.
 
 ## TODO
 
