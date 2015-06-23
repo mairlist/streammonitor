@@ -81,11 +81,11 @@ app = express()
 app.set "json spaces", 2
 
 # Root document returns entire status as JSON object
-app.get "/", (req, res, next) ->
+app.get "/", (req, res) ->
   res.jsonp getStatus()
 
-# Other URLs return single field from the status object
-app.get "/:key", (req, res, next) ->
+# Return single field from the status object
+app.get "/value/:key", (req, res) ->
   res.sendStatus getStatus()[req.params.key]
 
 
