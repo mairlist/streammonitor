@@ -1,0 +1,20 @@
+{
+  "name": "streammonitor",
+  "version": "0.0.1",
+  "description": "A monitor/silence detector for Icecast/Shoutcast streams",
+  "main": "app.coffee",
+  "dependencies": {
+    "buffertools": "^2.1.2",
+    "coffee-script": "^1.9.3",
+    "connect": "^3.4.0",
+    "express": "^4.12.4"
+  },
+  "devDependencies": {
+    "coffee-script": "^1.8.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Torben Weibert",
+  "license": "GPL"
+}
