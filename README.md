@@ -56,7 +56,7 @@ Meaning of the individual fields:
 - ``silenceSince`` is the date/time streammonitor received a sample louder than the specified silence threshold
 - ``silenceDuration`` is the number of seconds between ``silenceSince`` and ``now``
 
-You can also make an HTTP GET call to ``http://localhost:8000/values/<key>`` (where ``<key>`` is one of the field names above) to retrieve only a single field, as a plain text string (no JSON).
+You can also make an HTTP GET call to ``http://localhost:8000/value/<key>`` (where ``<key>`` is one of the field names above) to retrieve only a single field, as a plain text string (no JSON).
 
 ## License
 
