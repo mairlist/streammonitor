@@ -1,9 +1,10 @@
-FROM node:0.10
+FROM node:14-alpine
 
 MAINTAINER Torben Weibert <tw@mairlist.com>
 
-RUN npm -g install coffee-script
-RUN apt-get update && apt-get -y install curl lame
+RUN npm -g --production install coffeescript && \
+    apk --no-cache add lame curl && \
+    rm -rf /tmp/* /var/cache/apk/*
 
 WORKDIR /app
 

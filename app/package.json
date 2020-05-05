@@ -4,7 +4,7 @@
   "description": "A monitor/silence detector for Icecast/Shoutcast streams",
   "main": "app.coffee",
   "dependencies": {
-    "coffee-script": "^1.9.3",
+    "coffeescript": "^1.9.3",
     "express": "^4.12.4"
   },
   "scripts": {

@@ -1,4 +1,4 @@
-require "coffee-script"
+require "coffeescript"
 net = require "net"
 express = require "express"
 http = require "http"
