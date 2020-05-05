@@ -16,10 +16,11 @@ Then run the container, binding the HTTP port (8000), and passing the stream URL
 (in dBFS) as environment variables:
 
     docker run -p 8000:8000 -e STREAM_URL=http://sender.eldoradio.de:8000/192 \
-                            -e SILENCE_THRESHOLD=-20 mairlist/streammonitor
+                            -e SILENCE_THRESHOLD=-20 -e CHECK_INTERVAL=1000 \
+                            mairlist/streammonitor 
 
 ``STREAM_URL`` is a required parameter. ``SILENCE_THRESHOLD`` can be ommited, in which case
--20 dBFS is assumed.
+-20 dBFS is assumed. ``CHECK_INTERVAL`` is also optional and defaults to 1000 ms.
 
 The stream URL must be the actual URL for the stream (where the MP3 data is delivered),
 **not** the URL of a pls/m3u file.
