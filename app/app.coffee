@@ -1,4 +1,4 @@
-require "coffee-script"
+require "coffeescript"
 net = require "net"
 express = require "express"
 http = require "http"
@@ -15,6 +15,7 @@ child = null
 streamUrl = process.env.STREAM_URL
 silenceThreshold = process.env.SILENCE_THRESHOLD or -20
 httpPort = process.env.HTTP_PORT or 8000
+checkInterval = process.env.CHECK_INTERVAL or 1000
 
 # Config check
 unless streamUrl
@@ -95,4 +96,4 @@ server.listen 8000
 console.log "Stream monitor for %s started on port %d", streamUrl, httpPort
 
 # Start periodic check for child process
-setInterval checkChildProcess, 1000
+setInterval checkChildProcess, checkInterval
