@@ -87,7 +87,7 @@ app.get "/", (req, res) ->
 
 # Return single field from the status object
 app.get "/value/:key", (req, res) ->
-  res.sendStatus getStatus()[req.params.key]
+  res.jsonp getStatus()[req.params.key]
 
 
 # Create web server
