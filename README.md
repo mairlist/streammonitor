@@ -65,6 +65,22 @@ streammonitor is released under the GNU AGPL v3.0.
 
 Commercial licenses are available on request.
 
-## TODO
+## Monitoring plugin for e.g. Nagios, Icinga, CheckMK, Shinken
+Basic monitoring plugin in python3
+You need to specify the url of the streammonitor you want to check. You can specify values for changing the state if the silence is longer than CRIT seconds or if you want an alarm for WARN seconds after a 
+reconnection of the stream.  
 
-- Nagios plugin
+
+- usage 
+    ./check_streammonitor.py -h
+    usage: check_streammonitor.py [-h] -u URL [-c CRIT] [-w WARN]
+    
+    optional arguments:
+      -h, --help            show this help message and exit
+      -u URL, --url URL     URL to streammonitor
+      -c CRIT, --crit CRIT  seconds of silence after which silence gets critical. Default=1800
+      -w WARN, --warn WARN  seconds after reconnect the check should stay in WARN state. Default=0
+
+- example output:
+    ./check_streammonitor.py -u http://localhost:8000 -w 1800 -c 3600
+    OK - Stream http://sender.eldoradio.de:8000/192 is connected and playing since 1:41:15 (h:m:s)| silenceDuration=0s;;3600;;; onlineDuration=6075s;1800;;;; offlineDuration=0s;;;;;
